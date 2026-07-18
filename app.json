@@ -1,0 +1,115 @@
+{
+  "expo": {
+    "name": "real-app",
+    "slug": "real-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/splash-icon.png",
+    "scheme": "realapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#A4081D"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.realapp.mobile",
+      "associatedDomains": [
+        "applinks:real-app.com"
+      ],
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "config": {
+        "googleMapsApiKey": "YOUR_IOS_GOOGLE_MAPS_API_KEY"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#A4081D"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.realapp.mobile",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_ANDROID_GOOGLE_MAPS_API_KEY"
+        }
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#A4081D",
+          "enableFullScreenImage_legacy": true
+        }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "hardwareAccelerated": true
+          }
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
+        }
+      ],
+      "expo-font",
+      "expo-audio",
+      [
+        "@react-native-google-signin/google-signin"
+      ],
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "2fe1228a-7343-447f-92c7-58b76406f68e"
+      }
+    },
+    "owner": "olakay",
+    "updates": {
+      "url": "https://u.expo.dev/2fe1228a-7343-447f-92c7-58b76406f68e"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
+  }
+}
